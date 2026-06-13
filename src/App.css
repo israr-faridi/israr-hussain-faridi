@@ -214,6 +214,10 @@ nav {
     gap: 20px;
 
     h2 {
+        &:nth-child(odd) {
+            color: var(--hover);
+        }
+
         width: 30%;
         font-size: 4rem;
         font-weight: 700;
