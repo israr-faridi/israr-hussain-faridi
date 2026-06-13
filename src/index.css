@@ -1,0 +1,99 @@
+:root {
+  --black: #151515;
+  --dark-gray: #242424;
+  --overlay-gray: rgba(0, 0, 0, 0.705);
+  --hover: #4EE1A0;
+  --grey: #D9D9D9;
+  --white: #FFFFFF;
+  --orange: #FF6F5B;
+
+  /* padding */
+  --padding-desktop: 0 12%;
+  --padding-lagerLaptop: 0 9%;
+  --padding-Laptop: 0 7%;
+  --padding-tablet: 0 3%;
+}
+
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+section {
+  padding: 50px 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.mybtn {
+  color: var(--grey);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--hover);
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+  word-spacing: 2.5px;
+
+  &:hover {
+    color: var(--hover);
+    border-color: var(--grey);
+  }
+}
+
+
+
+
+
+
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* Image Open animation */
+@keyframes Open {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Rotate */
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); /* 360deg ensures a perfectly seamless loop */
+  }
+}
