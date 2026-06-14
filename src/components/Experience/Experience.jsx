@@ -1,4 +1,5 @@
 import React from 'react'
+import Ring from '../../assets/images/ring.svg'
 
 const Experience = () => {
     const Field = ["Html", "Css", "JavaScript", "BootStrap", "React js", "Node js"]
@@ -11,7 +12,9 @@ const Experience = () => {
                     })}
                 </div>
             </div>
-
+            <div className="ringImg">
+                <img className='img-fluid' src={Ring} alt="" />
+            </div>
         </section>
     )
 }

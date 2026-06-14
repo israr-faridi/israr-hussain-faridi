@@ -20,7 +20,7 @@ const Hero = () => {
         <section className='hero'>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-6 col-lg-7">
+                    <div className="col-12 col-md-12 col-lg-7">
                         <div className="hero-left">
                             <h1>Nice to meet you! I’m <span>Israr Hussain Faridi.</span></h1>
                             <p>Based in Pakistan, I’m a front-end developer passionate about building accessible web apps that users love.</p>
@@ -47,11 +47,6 @@ const Hero = () => {
 
                             {/* btn */}
                             <Btn text={"Contact Me"} />
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-5">
-                        <div className="hero-right">
-                            <img className='img-fluid' src={MyImg} alt="" />
                             <div className="cube">
                                 <img className='img-fluid' src={Cube} alt="" />
                             </div>
@@ -61,6 +56,12 @@ const Hero = () => {
                             <div className="circle">
                                 <img className='img-fluid' src={Circle} alt="" />
                             </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-12 col-lg-5">
+                        <div className="hero-right">
+                            <img className='img-fluid' src={MyImg} alt="" />
+
 
                         </div>
                     </div>
