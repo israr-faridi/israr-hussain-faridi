@@ -128,7 +128,7 @@ nav {
             .cube {
                 position: absolute;
                 top: 36%;
-                right: 6%;
+                right: 0%;
                 width: 8%;
                 z-index: 1;
                 transform-origin: center;
