@@ -78,13 +78,13 @@ const Project = () => {
             img: img5
         },
     ]
-    const [visibleCount, setVisibleCount] = useState(9);
+    const [visibleCount, setVisibleCount] = useState(6);
 
     const visibleProjects = projects.slice(0, visibleCount);
 
     const handleToggleProjects = (e) => {
         if (visibleCount >= projects.length) {
-            setVisibleCount(9);
+            setVisibleCount(6);
         } else {
             setVisibleCount(prevCount => prevCount + 3);
         }

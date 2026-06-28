@@ -62,6 +62,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 
   h2 {
     font-size: 5rem;
@@ -108,4 +109,39 @@ a {
     transform: rotate(360deg);
     /* 360deg ensures a perfectly seamless loop */
   }
+}
+
+
+/* Smooth Breathing Pulse Animation */
+@keyframes pulseGlow {
+    0% {
+        /* Start with a small, sharp drop-shadow and no expanded box-shadow */
+        filter: drop-shadow(0 0 5px rgba(0, 255, 163, 0.6));
+        box-shadow: 0 0 0 0 rgba(0, 255, 163, 0.5);
+    }
+    50% {
+        /* Deepen the glow and let the box-shadow ripple outward while fading */
+        filter: drop-shadow(0 0 12px rgba(0, 255, 163, 0.9));
+        box-shadow: 0 0 0 12px rgba(0, 255, 163, 0);
+    }
+    100% {
+        /* Smoothly return back to the start state */
+        filter: drop-shadow(0 0 5px rgba(0, 255, 163, 0.6));
+        box-shadow: 0 0 0 0 rgba(0, 255, 163, 0);
+    }
+}
+
+
+
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up by 20px at the halfway mark */
+    }
+    100% {
+        transform: translateY(0); /* Smoothly returns to the starting position */
+    }
 }

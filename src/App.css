@@ -53,6 +53,7 @@ nav {
         left: -140px;
         width: 100%;
         opacity: 0.9;
+        animation: floatUpDown 6s ease-in-out infinite;
     }
 
     .container {
@@ -189,25 +190,79 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Experience  */
+/* Experience */
 .experience {
     position: relative;
     overflow: hidden;
 
-    .experience_wrapper {
+    .exprience_box {
+        padding-left: 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--hover);
+            top: 6px;
+            left: 0;
+            border-radius: 50%;
+            /* Apply the animation: 2.5s duration makes it a calm, professional breathing effect */
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+
+            span {
+                color: var(--hover);
+                font-style: italic;
+                font-weight: 600;
+
+            }
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--hover);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--grey);
+        }
+    }
+
+    .ringImg {
+        position: absolute;
+        top: 40%;
+        right: -108px;
+        width: 100%;
+        rotate: 180deg;
+        opacity: 1;
+        animation: floatUpDown 6s ease-in-out infinite;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Skills  */
+.skills {
+    position: relative;
+    overflow: hidden;
+
+    .skills_wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -233,11 +288,12 @@ nav {
 
     .ringImg {
         position: absolute;
-        top: 22%;
-        right: -108px;
+        top: 40%;
+        left: -108px;
         width: 100%;
-        rotate: 180deg;
-        opacity: 0.6;
+        /* rotate: 180deg; */
+        opacity: 1;
+        animation: floatUpDown 6s ease-in-out infinite;
     }
 }
 
@@ -259,12 +315,11 @@ nav {
     }
 
     .porject_wrapper {
-        padding-top: 40px;
         display: flex;
         flex-wrap: wrap;
         gap: 22px;
         justify-content: center;
-        
+
         /* Smooth scrolling */
         .project_box {
             position: relative;
@@ -306,7 +361,7 @@ nav {
                     padding-bottom: 4px;
                     /* text-transform: capitalize; */
                 }
-                
+
             }
 
             &:hover .porject_box_overlay {
@@ -316,10 +371,193 @@ nav {
         }
 
     }
+
     .view_more_container {
         display: flex;
         justify-content: center;
         margin-top: 40px;
         width: 100%;
+    }
+}
+
+
+/* Contact Us */
+.contact {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background-color: var(--dark-gray);
+    color: #fff;
+
+    .contactLeft {
+        h2 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #d9d9d9;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+    }
+
+    .contactRight {
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            /* Space between rows */
+            position: relative;
+            z-index: 1;
+
+            .input-group {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #ffffff;
+                    /* White default bottom line */
+                    padding: 16px 0;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                    outline: none;
+                    transition: border-color 0.3s ease;
+
+                    &::placeholder {
+                        color: #737373;
+                        /* Muted gray text matching layout screenshot */
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    /* Disables dragging handle box distortion */
+
+                }
+
+                /* Focus State - Turns exactly to your branding green theme color */
+                input:focus,
+                textarea:focus {
+                    border-bottom: 1px solid var(--hover);
+                }
+
+                /* Validation Classes injected via React conditional rendering */
+                &.is-valid input,
+                &.is-valid textarea {
+                    border-bottom: 1px solid var(--hover);
+                }
+
+                &.is-invalid input,
+                &.is-invalid textarea {
+                    border-bottom: 1px solid #ff6b6b;
+                    /* Muted soft red error line */
+                }
+
+                .error-text {
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0;
+                    font-size: 0.85rem;
+                    color: #ff6b6b;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            .btn-wrapper {
+                display: flex;
+                justify-content: flex-end;
+                /* Pushes button exactly right aligned */
+                margin-top: 10px;
+
+                .send-msg-btn {
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid var(--hover);
+                    /* Permanent signature bottom link underline */
+                    cursor: pointer;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--hover);
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .ringImg {
+        position: absolute;
+        top: 60%;
+        left: -108px;
+        width: 100%;
+        opacity: 1;
+        animation: floatUpDown 6s ease-in-out infinite;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Start */
+footer {
+    background-color: var(--dark-gray);
+
+    .footer_data {
+        border-top: 2px solid #fff;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .footerIcon {
+            gap: 8px;
+            display: flex;
+
+            padding-right: 10px;
+
+            i {
+                font-size: 2rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    display: inline-block;
+                    /* transform: scale(1.2); */
+                    scale: 1.2;
+                    color: var(--hover);
+                }
+            }
+        }
     }
 }
