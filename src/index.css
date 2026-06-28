@@ -58,7 +58,17 @@ a {
 
 
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--hover);
+  }
+}
 
 
 
@@ -93,7 +103,9 @@ a {
   from {
     transform: rotate(0deg);
   }
+
   to {
-    transform: rotate(360deg); /* 360deg ensures a perfectly seamless loop */
+    transform: rotate(360deg);
+    /* 360deg ensures a perfectly seamless loop */
   }
 }
