@@ -15,7 +15,13 @@ const Hero = () => {
         "ri-nodejs-line"
 
     ]
-
+const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
     return (
         <section className='hero'>
             <div className="container">
@@ -46,7 +52,7 @@ const Hero = () => {
 
 
                             {/* btn */}
-                            <Btn text={"Contact Me"} />
+                            <Btn text={"Contact Me"} onclick={handleScrollToContact}/>
                             <div className="cube">
                                 <img className='img-fluid' src={Cube} alt="" />
                             </div>
