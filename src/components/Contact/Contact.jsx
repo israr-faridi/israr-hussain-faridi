@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Ring from '../../assets/images/ring.svg'
+import { Link } from 'react-router-dom';
 
 
 const Contact = () => {
@@ -84,6 +85,10 @@ const Contact = () => {
                         <div className="contactLeft">
                             <h2>Contact</h2>
                             <p>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+                            <div className="contactNum">
+                                <Link to="tel:+923102312801"><i className="ri-phone-line"></i> +923102312801</Link>
+                                <Link to="mailto:israrhussainfaridi90gmail"><i className="ri-mail-line"></i> israrhussainfaridi90gmail.com</Link>
+                            </div>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-6">
@@ -139,8 +144,8 @@ const Contact = () => {
                 </div>
             </div>
             <div className="ringImg">
-                            <img className='img-fluid' src={Ring} alt="" />
-                        </div>
+                <img className='img-fluid' src={Ring} alt="" />
+            </div>
         </section>
     )
 }
